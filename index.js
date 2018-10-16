@@ -16,6 +16,7 @@ mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection 
 mongoose.set('debug', true)
 
 require('./controllers/auth')(app);
+require('./controllers/stories')(app);
 
 app.get('/', function(req, res) {
   res.send('The Story API is running!')
