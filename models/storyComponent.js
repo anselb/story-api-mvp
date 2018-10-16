@@ -5,7 +5,6 @@ const StoryComponentSchema = new Schema({
   createdAt: { type: Date },
   updatedAt: { type: Date },
   description: { type: String, required: true },
-  author: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   nextStoryComponents: [{ type: Schema.Types.ObjectId, ref: 'StoryComponentSchema' }]
 })
 
