@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const StoryComponent = require('./storyComponent')
 
-const Story = new Schema({
+const StorySchema = new Schema({
   createdAt: { type: Date },
   updatedAt: { type: Date },
   title: { type: String, required: true },
@@ -10,7 +10,7 @@ const Story = new Schema({
   leadingStoryComponents: [{ type: Schema.Types.ObjectId, ref: 'StoryComponentSchema' }]
 })
 
-Story.pre('save', function(next) {
+StorySchema.pre('save', function(next) {
   // Set createdAt and updatedAt times
   const now = new Date()
   this.updatedAt = now
