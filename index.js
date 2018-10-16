@@ -17,6 +17,7 @@ mongoose.set('debug', true)
 
 require('./controllers/auth')(app);
 require('./controllers/stories')(app);
+require('./controllers/storyComponents')(app);
 
 app.get('/', function(req, res) {
   res.send('The Story API is running!')
