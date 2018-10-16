@@ -18,7 +18,6 @@ describe('User', function() {
         done()
       })
   })
-})
 
 // Successful sign up
 it('should be able to sign up', (done) => {
@@ -52,4 +51,5 @@ it('should be able to login', (done) => {
       res.should.have.status(200)
       done()
     })
+  })
 })
