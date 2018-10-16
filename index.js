@@ -17,6 +17,10 @@ mongoose.set('debug', true)
 
 require('./controllers/auth')(app);
 
-app.listen(process.env.PORT, () => console.log("Listening on a port"));
+app.get('/', function(req, res) {
+  res.send('The Story API is running!')
+})
+
+app.listen(process.env.PORT, () => console.log(`Listening on port ${process.env.PORT}`));
 
 module.exports = app;
